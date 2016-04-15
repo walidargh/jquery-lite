@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src='../jquery-lite/lib/jquery_lite.js'></script>
+    <!-- <script type="text/javascript" src='js/snake.js'></script> -->
+    <link rel="stylesheet" href="./css/snake.css" charset="utf-8">
+  </head>
+  <body>
+    <figure class="snake-game"></figure>
+  </body>
+  <script type="text/javascript">
+    for(var i = 0; i < 25; i++) {
+      var $ul = $l(document.createElement('ul'));
+      $ul.addClass('row');
+      $ul.attr("data-row", i);
+      for(var j = 0; j < 25; j++) {
+        var $li = $l(document.createElement('li'));
+        $li.addClass('cell');
+        $li.attr("data-pos", [j,i]);
+        $ul.append($li);
+      }
+      $l('.snake-game').append($ul);
+    }
+  </script>
+</html>
